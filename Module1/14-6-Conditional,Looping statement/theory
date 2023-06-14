@@ -1,0 +1,49 @@
+conditional statements:
+
+If
+else if
+else
+nested if
+when
+
+= //value assign
+==//value comapre
+
+Loop:
+Entry Control Loop
+1)
+for(int i=1;i<=10;i++)
+{
+	ans
+}
+
+
+
+2)
+while
+
+Exit Control loop:
+3)
+do while
+
+
+Functions:
+
+1)Inbuilt Functions:
+
+
+
+2)Userdefined Functions:
+
+
+	1)With Para With Return type
+	2)With Para Without retturn type
+	3)With Return type without para
+	4)Without reteurn type without para
+
+oop:
+
+
+
+
+
