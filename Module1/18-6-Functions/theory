@@ -1,0 +1,30 @@
+functions:
+
+1)Inbuilt Function:
+named function
+2)User defined Function:
+ 	i)with para with return type
+	ii)with para without return type
+	iii)with return type without para
+         iv)without para without return type
+
+fun add(a:Int,b:Int):Int
+{
+
+	return a+b.apply
+	{
+		
+	}
+	with
+}
+
+var s = Student().also
+{
+	s.id=102
+	s.name="vandit"
+}
+s.id=101
+s.name="sahil"
+
+=
+==
