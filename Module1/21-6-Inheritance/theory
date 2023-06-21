@@ -1,0 +1,23 @@
+Inheritance: 
+
+1)
+parent
+child
+
+2)
+super
+sub
+
+3)
+base
+derived
+
+types of inheritance:
+1)single
+2)multilevel
+3)multiple-> not supported kotlin
+4)hierarchical
+5)hybrid
+
+
+
