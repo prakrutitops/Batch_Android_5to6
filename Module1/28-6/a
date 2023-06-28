@@ -1,0 +1,17 @@
+Step 1: Create a kotlin class
+
+step 2:take a primary constructor and assign your values
+ 
+step 3:implement Serializable interface
+
+step 4:Create a new class and assign fileoutputstream which can give
+ a filepath[file create]
+
+step 5:objectoutputstream which can give value to new object
+
+step 6:write your data
+-------------------------------READ---------------------------------
+step 7:fileinputstream and read data
+step 8:object input steam will deserialize
+step 9:print
+ 
