@@ -1,1 +1,22 @@
 
+Thread:Process handle
+
+class - Thread
+interface - Runnable
+
+Lifecycle:
+init
+start
+run
+stop
+destroy
+
+synchronization
+
+collection:class+interface+methods
+
+
+list->all data
+set->duplicate data remove
+map->key,value pair
+
