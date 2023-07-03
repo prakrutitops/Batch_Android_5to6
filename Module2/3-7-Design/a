@@ -1,1 +1,30 @@
+android studio architecture:
+
+1)app:
+
+manifest -> launching
+
+java
+
+1st folder ->kotlin
+
+
+res
+
+drawable -> images
+layout -> xml file
+mipmap -> images[inbuilt]
+values ->color,string,theme
+xml-> xml files
+
+
+2)gradle scripts -> library 
+
+
+Task:
+
+
+
+
+
 
