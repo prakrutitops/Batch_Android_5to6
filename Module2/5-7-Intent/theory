@@ -1,0 +1,7 @@
+Intent: switching from one activity to another activity
+
+types of intent
+1)explicit : switching from one activity to another activity in same app
+2)implicit : switching from one activity to another activity between diffrent app
+
+Splash Screen -> loading screen
