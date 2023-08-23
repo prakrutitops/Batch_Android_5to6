@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="privacy">
+
+        <item>Everyone</item>
+        <item>My Contacts</item>
+        <item>No Body</item>
+
+
+
+
+    </string-array>
+
+    <string-array name="privacy_value">
+
+        <item>Everyone can show your detail</item>
+        <item>My Contacts - only your contact show your detail</item>
+        <item>No Body can show your details</item>
+
+
+
+
+    </string-array>
+
+</resources>

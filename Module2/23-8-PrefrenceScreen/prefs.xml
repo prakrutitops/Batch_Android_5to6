@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="a1"
+        android:title="Personal Information"
+        android:summary="Your Personal Information">
+
+
+        <EditTextPreference
+            android:key="name"
+            android:title="Your name"
+            android:summary="Enter Your Name"/>
+
+        <EditTextPreference
+            android:key="pass"
+            android:title="Your Password"
+            android:summary="Enter Your Password"/>
+
+
+
+
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:key="a2"
+        android:title="About Information"
+        android:summary="Your About Information">
+
+            <CheckBoxPreference
+                android:key="check1"
+                android:summary="On/Off"
+                android:title="Select Value"/>
+
+
+        <ListPreference
+            android:key="list1"
+            android:summary="Select Your Option"
+            android:title="Privacy Settings"
+            android:entries="@array/privacy"
+            android:entryValues="@array/privacy_value"/>
+
+
+
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
