@@ -1,0 +1,18 @@
+Database:
+
+Offline:
+sqlite-> 
+sql ->structured query language
+
+
+realm
+room db
+
+
+Online:
+mysql
+firebase
+
+create table details(id int primary key AUTO_INCREMENT,name varchar(255),number varchar(255))
+
+"Create table "+
