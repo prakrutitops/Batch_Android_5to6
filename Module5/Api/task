@@ -1,0 +1,17 @@
+1.Sign up & Login:
+
+Table Name:signup_detail
+id
+mobile
+password
+location
+username
+
+2.Insert,View,Update,Delete:
+Table Name:cricketer_detail
+cricketer_name
+cricketer_total_score
+cricketer_age
+cricket_highest_score
+cricker_wickets
+
