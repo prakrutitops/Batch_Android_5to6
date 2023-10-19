@@ -19,10 +19,12 @@ class MainActivity : AppCompatActivity()
     lateinit var edtOtp:EditText
     lateinit var btn1: Button
     lateinit var btn2:Button
-    lateinit var verificationid:String
+
+    //1
     private lateinit var auth: FirebaseAuth
+    lateinit var verificationid:String
     lateinit var mcallback:PhoneAuthProvider.OnVerificationStateChangedCallbacks
-    var num="+91"
+
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
@@ -34,6 +36,7 @@ class MainActivity : AppCompatActivity()
         btn2 = findViewById(R.id.btnverify)
         auth = FirebaseAuth.getInstance()
 
+        //2
         btn1.setOnClickListener {
 
             if(TextUtils.isEmpty(edtPhone.text.toString()))
@@ -51,7 +54,7 @@ class MainActivity : AppCompatActivity()
 
 
         }
-
+        //5
         btn2.setOnClickListener {
 
             if(TextUtils.isEmpty(edtOtp.text.toString()))
@@ -65,13 +68,13 @@ class MainActivity : AppCompatActivity()
             }
 
         }
-
+        //4
         mcallback= object :PhoneAuthProvider.OnVerificationStateChangedCallbacks()
         {
             override fun onVerificationCompleted(p0: PhoneAuthCredential)
             {
 
-                var code =p0.smsCode
+                var code =p0.smsCode//get otp
 
                 if(code!=null)
                 {
@@ -99,17 +102,17 @@ class MainActivity : AppCompatActivity()
         }
 
     }
-
+    //6
     private fun verifycode(otp: String)
     {
         val credential = PhoneAuthProvider.getCredential(verificationid, otp)
         signinwithcredential(credential)
     }
-
+    //7
     private fun signinwithcredential(credential: PhoneAuthCredential)
     {
 
-        auth.signInWithCredential(credential).addOnCompleteListener {
+      /*  auth.signInWithCredential(credential).addOnCompleteListener {
             if(it.isSuccessful)
             {
                 Toast.makeText(applicationContext,"success",Toast.LENGTH_LONG).show()
@@ -124,10 +127,11 @@ class MainActivity : AppCompatActivity()
             .addOnFailureListener()
             {
 
-            }
+            }*/
 
     }
 
+    //3
     private fun sendverificationcode(mob: String)
     {
         PhoneAuthProvider.getInstance().verifyPhoneNumber(mob,60,TimeUnit.SECONDS,this,mcallback)
