@@ -1,0 +1,100 @@
+1.
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import kotlinx.android.synthetic.main.fragment_sender.*
+import androidx.fragment.app.commit
+
+class SenderFragment : Fragment() {
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_sender, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Set click listener on the button to send data
+        sendButton.setOnClickListener {
+            sendDataToReceiver()
+        }
+    }
+
+    private fun sendDataToReceiver() {
+        // Create a Bundle and add data
+        val bundle = Bundle().apply {
+            putString("message", "Hello from SenderFragment!")
+        }
+
+        // Create an instance of the ReceiverFragment and set the arguments
+        val receiverFragment = ReceiverFragment()
+        receiverFragment.arguments = bundle
+
+        // Navigate to the ReceiverFragment
+        parentFragmentManager.commit {
+            replace(R.id.fragmentContainer, receiverFragment)
+            addToBackStack(null)
+        }
+    }
+}
+
+2.
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import kotlinx.android.synthetic.main.fragment_receiver.*
+
+class ReceiverFragment : Fragment() {
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment_receiver, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Retrieve data from arguments
+        val message = arguments?.getString("message", "Default Message")
+
+        // Display the received message
+        receivedMessageTextView.text = message
+    }
+}
+
+3.
+<!-- Replace with your layout as needed -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Data to Receiver" />
+
+</RelativeLayout>
+
+4.
+<!-- Replace with your layout as needed -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Data to Receiver" />
+
+</RelativeLayout>
